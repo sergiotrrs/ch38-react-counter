@@ -1,25 +1,27 @@
+import { useState } from "react";
 import { CounterButton } from "./counterButton";
 
 
 export const Counter = () => {
-  let counter = 10;
+  
+   
+  const [ counterValue, setCounter ] = useState(1);
 
   const incrementHandle = () =>{
-    console.log("incremento " + ++counter );
-
+    setCounter(  counterValue + 1 );
   }
 
   const decrementHandle = () =>{
-    console.log("decremento: " + --counter);
+    setCounter( counterValue - 1)
   }
 
   const resetHandle = () =>{
-    console.log("reset: " + (counter = 10) );
+    setCounter( 1 );
   }
 
   return (
     <>
-      <h2>{ counter }</h2>
+      <h2>{ counterValue }</h2>
       
       <CounterButton buttonHandle = {incrementHandle}  >+</CounterButton>
       <CounterButton buttonHandle = {decrementHandle}  >-</CounterButton>
