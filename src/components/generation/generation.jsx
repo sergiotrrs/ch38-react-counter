@@ -3,12 +3,12 @@
  *  El nombre del componente debe 
  *  respetar la convención UpperCamelCase
  */
-const Generation = ( props ) =>{
+const Generation = ( {style } ) =>{
 
     return (
     <div>
-      <p style={ props.style  } > Generation1 </p>
-      <p style={{color: props.style.color, fontSize: props.style.fontSize}}>Generation2</p>
+      <p style={ style  } > Generation1 </p>
+      <p style={{color: style.color, fontSize: style.fontSize}}>Generation2</p>
     
     </div>
     );
