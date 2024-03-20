@@ -2,15 +2,18 @@
 /**
  *  El nombre del componente debe 
  *  respetar la convención UpperCamelCase
+ * 
+ *  Un react fragment <> , <React.fragment>, permite agrupar
+ *  múltiples elementos hijos sin agregar nodos adicionales al DOM.
  */
 const Generation = ( {style } ) =>{
 
     return (
-    <div>
+    <>
       <p style={ style  } > Generation1 </p>
       <p style={{color: style.color, fontSize: style.fontSize}}>Generation2</p>
     
-    </div>
+    </>
     );
 }
 
