@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./navbar.css"
 
 const pages = [
@@ -24,7 +24,9 @@ export const Navbar = () => {
         <ul>
           {/* <li><a href="url"> Nombre Link </a></li> */}
           {/*  pages.map( (page)=> <li key={page.id}><a href={page.url} >{page.name}</a></li> ) */}
-          {  pages.map( ({id, url, name})=> <li key={id}><a href={url} >{name}</a></li> ) }
+          {  pages.map( ({id, url, name})=> <li key={id}>
+                  <Link to={url} >{name}</Link>
+            </li> ) }
 
         </ul>
       </nav>

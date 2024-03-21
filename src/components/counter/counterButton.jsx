@@ -1,10 +1,11 @@
+import { Button } from "@mui/material"
 
 
 
 export const CounterButton = ( {children, buttonHandle} ) => {
   return (
     <>
-      <button  onClick={ (event)=> buttonHandle()  } >{children}</button>
+      <Button variant="outlined" onClick={ (event)=> buttonHandle()  } >{children}</Button>
     </>
   )
 }
