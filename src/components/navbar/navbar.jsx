@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import "./navbar.css"
 
 const pages = [
   {id: 1, name: "Home"  , url: "/" },
@@ -18,11 +19,12 @@ export const Navbar = () => {
   console.log("Soy el componente Navbar y me renderizo");
   return (
     <>
-      <h2>Empresa</h2>
+      <h2 className="principal-title" >Empresa</h2>
       <nav>
         <ul>
           {/* <li><a href="url"> Nombre Link </a></li> */}
-          {  pages.map( (page)=> <li key={page.id}><a href={page.url} >{page.name}</a></li> ) }
+          {/*  pages.map( (page)=> <li key={page.id}><a href={page.url} >{page.name}</a></li> ) */}
+          {  pages.map( ({id, url, name})=> <li key={id}><a href={url} >{name}</a></li> ) }
 
         </ul>
       </nav>
